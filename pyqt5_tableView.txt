@@ -1,0 +1,52 @@
+
+pyqt5中tableView控件的列宽和行高的设置:
+1.固定宽度，用户不可调整，默认值为setDefaultSectionSized的值
+# 表宽度设置
+table.horizontalHeader().setDefaultSectionSize(150)
+table.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
+ 
+ 
+# 表高度设置
+table.verticalHeader().setDefaultSectionSize(40)
+table.verticalHeader().setSectionResizeMode(QHeaderView.Fixed)
+
+2.自动平分适应可视区域
+# 表宽度自适应可视区域设置
+table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+ 
+ 
+# 表高度自适应可视区域设置
+table.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
+3.自动适应内容
+# 表宽度自适应内容设置
+table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+ 
+ 
+# 表高度自适应内容设置
+table.verticalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+
+4.自定义宽度，用户可调整，默认值为setDefaultSectionSized的值
+
+
+方法一：Custom
+ 
+# 表宽度设置，用户可调整
+table.horizontalHeader().setDefaultSectionSize(150)
+table.horizontalHeader().setSectionResizeMode(QHeaderView.Custom)
+ 
+ 
+# 表高度设置，用户可调整
+table.verticalHeader().setDefaultSectionSize(40)
+table.verticalHeader().setSectionResizeMode(QHeaderView.Custom)
+ 
+方法二：Interactive
+ 
+# 表宽度设置，用户可调整
+table.horizontalHeader().setDefaultSectionSize(150)
+table.horizontalHeader().setSectionResizeMode(QHeaderView.Interactive)
+ 
+ 
+# 表高度设置，用户可调整
+table.verticalHeader().setDefaultSectionSize(40)
+table.verticalHeader().setSectionResizeMode(QHeaderView.Interactive)
